@@ -231,6 +231,381 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/如何打开和关闭ipv6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="毛泰山(Taylor Chou)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不完全的计算机科学与技术专业的分享">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/29/如何打开和关闭ipv6/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-29T16:19:43+08:00">
+                2018-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="使用-netsh-命令关闭-IPv6-隧道适配器："><a href="#使用-netsh-命令关闭-IPv6-隧道适配器：" class="headerlink" title="使用 netsh 命令关闭 IPv6 隧道适配器："></a>使用 netsh 命令关闭 IPv6 隧道适配器：</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">netsh interface teredo set state disable</div><div class="line"></div><div class="line">netsh interface <span class="number">6</span>to4 set state disabled</div><div class="line"></div><div class="line">netsh interface isatap set state disabled</div></pre></td></tr></table></figure>
+<h2 id="当我们需要使用-IPv6-网络时，只需要使用如下命令恢复-IPv6-隧道设置即可："><a href="#当我们需要使用-IPv6-网络时，只需要使用如下命令恢复-IPv6-隧道设置即可：" class="headerlink" title="当我们需要使用 IPv6 网络时，只需要使用如下命令恢复 IPv6 隧道设置即可："></a>当我们需要使用 IPv6 网络时，只需要使用如下命令恢复 IPv6 隧道设置即可：</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">netsh interface teredo set state default</div><div class="line"></div><div class="line">netsh interface <span class="number">6</span>to4 set state default</div><div class="line"></div><div class="line">netsh interface isatap set state default</div></pre></td></tr></table></figure>
+<p><strong>具体的设置还有很多，一般来说，windows7或者windows10通过上述命令在powershell上逐条执行，就可以使用ipv6了</strong></p>
+<p>对于windowsXP还需要安装一下ipv6的网络协议。当然这种办法还有一个问题，有时候在每一次电脑重新启动的时候，会自动把已经开启的这些隧道给自动关闭，需要在组策略上进行设置。当然这个没关系的。就是把这三条命令重新复制粘贴一下就可以。不废什么事情的。</p>
+<p><strong>PS：有时候会在cmd的命令行下，会提示没有权限 ，这个时候，需要以管理员的权限执行。只需要找到C:\windows\system32\cmd.exe，然后再cmd.exe右键以管理员的形式运行。<br>直接win+X就可以弹出powershell命令行</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/24/使用shareX上传到七牛云空间的办法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="毛泰山(Taylor Chou)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不完全的计算机科学与技术专业的分享">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/24/使用shareX上传到七牛云空间的办法/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T04:32:16+08:00">
+                2018-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="shareX的简介"><a href="#shareX的简介" class="headerlink" title="shareX的简介"></a>shareX的简介</h1><pre><code>shareX是一款非常牛逼的上传工具，也是一款非常牛逼的截图工具。功能很强大。
+使用sharex不仅开源把你本地的文件上传到你所指定的云端存储空间，如Dropbox，
+Google Driver，Onedrive等。
+但是shareX有时候并没有把所有的云存储空间包含进去，所以需要我们自己配置。
+</code></pre><h1 id="七牛云存储"><a href="#七牛云存储" class="headerlink" title="七牛云存储"></a>七牛云存储</h1><pre><code>七牛云存储是国内非常流行且著名的云存储服务商。免费用户可以每个月使用10G的流量。
+我们可以把一些我们需要的图片或者MP3文件等放到七牛云空间中。七牛云都会给我们一个
+非常棒的访问速度。
+</code></pre><p><a href="http://qiniu.com" target="_blank" rel="external">七牛云快速访问</a></p>
+<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><blockquote>
+<ul>
+<li>下载shareX</li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/24/Next主题的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="毛泰山(Taylor Chou)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不完全的计算机科学与技术专业的分享">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/24/Next主题的使用/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T04:21:17+08:00">
+                2018-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/测试第一篇文章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -577,7 +952,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
