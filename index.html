@@ -302,7 +302,41 @@
       
         
           
-            
+            <div id="cnblogs_post_body" class="blogpost-body"><p>1、Chrome程序资源文件路径：</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_767701" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">C:\Program Files (x86)\Google\Chrome\Application\66.0.3359.181\resources.pak</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>2、下载Chrome PAK文件解包工具(ChromePAK V5)：</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_807938" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">https:</code><code class="bash plain">//shuax</code><code class="bash plain">.com</code><code class="bash plain">/cpv5</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>3、将Chrome程序资源文件拷贝至D:\chrome\</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_659863" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">D:\chrome\resources.pak　　</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>4、将下载的PAK解包工具(windows\amd64\)拷贝至D:\chrome\</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_603814" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">D:\chrome\pak_tools.exe</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>5、在D:\chrome\目录中按住shift键，右击鼠标，打开Powershell窗口，执行如下命令解包PAK文件。</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_443818" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">D:\chrome\pak_tools.exe -c=unpack -f=D:\chrome\resources.pak</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>6、用编辑器(notepad++或者sublime text)编辑如下文件：</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_990798" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">D:\chrome\resources\unknown\297</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>修改如下代码：</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_678532" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">修改前：</code></div><div class="line number2 index1 alt1"><code class="bash plain">&lt;div </code><code class="bash functions">id</code><code class="bash plain">=</code><code class="bash string">"most-visited"</code><code class="bash plain">&gt;&lt;</code><code class="bash plain">/div</code><code class="bash plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="bash plain">修改后：</code></div><div class="line number4 index3 alt1"><code class="bash plain">&lt;!-- &lt;div </code><code class="bash functions">id</code><code class="bash plain">=</code><code class="bash string">"most-visited"</code><code class="bash plain">&gt;&lt;</code><code class="bash plain">/div</code><code class="bash plain">&gt; --&gt;</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>7、执行如下命令重新打包PAK文件。</p>
+    <div class="cnblogs_Highlighter sh-gutter">
+    <div><div id="highlighter_231288" class="syntaxhighlighter  bash"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">D:\chrome\pak_tools.exe -c=repack -f=D:\chrome\resources.json</code></div></div></td></tr></tbody></table></div></div>
+    </div>
+    <p>8、关闭所有打开的Chrome窗口，用重新打包的resourece.pak文件覆盖原来文件。</p>
+    <p>9、重新打开Chrome，干净清爽的界面出现了！:-)</p>
+    <p><strong>[THE END]</strong></p></div>
           
         
       
